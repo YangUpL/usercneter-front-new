@@ -56,6 +56,43 @@ export async function SearchUsers(body: any, options?: { [key: string]: any }) {
   });
 }
 
+/** 删除接口 POST /api/user/delete */
+export async function deleteUserById(body: any, options?: { [key: string]: any }) {
+  return request<API.BaseResponse<API.CurrentUser>>('/api/user/delete', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
+    ...(options || {}),
+  });
+}
+
+/** 添加接口 POST /api/user/addUser */
+export async function addUser(body: any, options?: { [key: string]: any }) {
+  return request<API.BaseResponse<API.CurrentUser>>('/api/user/add', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
+    ...(options || {}),
+  });
+}
+
+/** 修改接口 POST /api/user/update */
+export async function updateUser(body: any, options?: { [key: string]: any }) {
+  return request<API.BaseResponse<API.CurrentUser>>('/api/user/update', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
+    ...(options || {}),
+  });
+}
+
+
 /** 此处后端没有提供注释 GET /api/notices */
 export async function getNotices(options?: { [key: string]: any }) {
   return request<API.NoticeIconList>('/api/notices', {
@@ -63,6 +100,11 @@ export async function getNotices(options?: { [key: string]: any }) {
     ...(options || {}),
   });
 }
+
+
+
+
+
 
 /** 获取规则列表 GET /api/rule */
 export async function rule(

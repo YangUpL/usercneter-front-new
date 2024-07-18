@@ -7,14 +7,27 @@ declare namespace API {
     id: number;
     username: string;                                                                                             
     userAccount:string;                                                                                           
-    avatarUrl?: string;
+    avatarUrl: string;
     gender: number;                                                                                                                                                                                                              
     phone: string;                                                                                                          
     email: string;                                                                                                              
     userStatus: number;                                                                                      
-    createTime:Data;                                                                   
+    createTime:Data;
+    updateTime:Data;                                                                    
     userRole: number;
     planetCode:string;
+  };
+
+  type UpdateUser = {
+    id: number;
+    username: string;                                                                                             
+    userAccount:string;                                                                                           
+    avatarUrl: string;
+    gender: number;                                                                                                                                                                                                              
+    phone: string;                                                                                                          
+    email: string;                                                                                                              
+    userStatus: number;                                                                                                                                                      
+    userRole: number;
   };
 
   type LoginResult = {
@@ -78,7 +91,6 @@ declare namespace API {
     userAccount?: string;
     userPassword?: string;
     checkPassword?: string;
-    planetCode?:string;
     // type?: string;
   };
 

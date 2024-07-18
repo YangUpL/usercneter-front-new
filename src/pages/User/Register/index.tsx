@@ -205,10 +205,6 @@ const Login: React.FC = () => {
                   prefix: <LockOutlined />,
                 }}
                 placeholder="请输入密码"
-                // placeholder={intl.formatMessage({
-                //   id: 'pages.login.userPassword.placeholder',
-                //   defaultMessage: '请输入密码',
-                // })}
                 rules={[
                   {
                     required: true,
@@ -242,22 +238,6 @@ const Login: React.FC = () => {
                     min: 8,
                     type: 'string',
                     message: '长度不能小于8',
-                  },
-                ]}
-              />
-
-
-              <ProFormText
-                name="planetCode"
-                fieldProps={{
-                  size: 'large',
-                  prefix: <UserOutlined />,
-                }}
-                placeholder="请输入星球编号"
-                rules={[
-                  {
-                    required: true,
-                    message: '星球编号是必填项！',
                   },
                 ]}
               />
